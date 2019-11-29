@@ -1,1 +1,7 @@
-{{outlet}}
+<ul class="book-list">
+    {{#each this.model as |book|}}
+    <li class="book">
+    <Article @title={{book.title}} @author={{book.author}} @description={{book.description}} @image={{book.image}} />
+    </li>
+    {{/each}}
+</ul>

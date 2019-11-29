@@ -3,12 +3,23 @@
     <h2>Welcome!</h2>
     <p>There will be loads of books here.</p>
     {{#link-to "about" class="button"}}
-    About Us
+    <BsButton>About us</BsButton>
+    {{/link-to}}
+    {{#link-to "add-book" class="button"}}
+    <BsButton>Add a book</BsButton>
+    {{/link-to}}
+    {{#link-to "books" class="button"}}
+    <BsButton>See All Books</BsButton>
     {{/link-to}}
 </div>
 
-<AddArticle @submit={{action "checkingIfArticleBeenAdded"}} @bookTitle={{this.bookTitle}} @bookAuthor={{this.bookAuthor}} @bookSummary={{this.bookSummary}} />
-
-{{#if articleBeenAdded}}
-<Article @book.title={{this.bookTitle}} @book.author={{this.bookAuthor}} book.summary={{this.bookSummary}} />
-{{/if}}
+<div class="slide-show">
+    <BsCarousel @autoPlay={{true}} @wrap={{true}} @index={{0}} @interval={{5000}} @keyboard={{true}} @ltr={{true}}
+        @pauseOnMouseEnter={{true}} @showControls={{true}} @showIndicators={{true}} as |slide|>
+        {{#each this.model as |book|}}
+        <slide.slide>
+            <img alt={{book.description}} src={{book.image}}>
+        </slide.slide>
+        {{/each}}
+    </BsCarousel>
+</div>

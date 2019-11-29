@@ -1,7 +1,27 @@
 
 @import "ember-bootstrap/bootstrap";
 
+html, body {height:100%;}
+html {display:table; width:100%;}
+body {display:table-cell; text-align:center; vertical-align:middle;}
+
 img {
-    width: 8em;
-    height: 10em;
+    width: 20em;
+    height: 25em;
+}
+.slide-show {
+    margin: auto;
+    padding: 2em;
+}
+.add-article {
+    margin: auto;
+    max-width: 30em;
+}
+.book-list {
+    margin: auto;
+}
+.book {
+    display: table-cell;
+    max-width: 30em;
+    max-height: 10em;
 }

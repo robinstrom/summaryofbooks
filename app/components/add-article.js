@@ -6,9 +6,7 @@ export default Component.extend({
     bookSummary: null,
     actions: {
         submit() {
-            this.set('bookTitle', this.bookTitle);
-            this.set('bookAuthor', this.bookAuthor);
-            this.set('bookSummary', this.bookSummary);
+            
         }
     }
 });

@@ -1,0 +1,6 @@
+<BsForm @onSubmit={{action "submit"}} as |form|>
+    <form.element @label="Title" @placeholder="title" @property="title" @required={{true}} />
+    <form.element @label="Author" @placeholder="author" @property="author" @required={{true}} />
+    <form.element @controlType="textarea" @label="Textarea" @property="textarea" />
+    <BsButton @defaultText="Submit" @type="primary" @buttonType="submit" />
+</BsForm>

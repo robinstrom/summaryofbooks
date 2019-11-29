@@ -1,0 +1,14 @@
+<div class="jumbo">
+    <div class="right tomster"></div>
+    <h2>Welcome!</h2>
+    <p>There will be loads of books here.</p>
+    {{#link-to "about" class="button"}}
+    About Us
+    {{/link-to}}
+</div>
+
+<AddArticle @submit={{action "checkingIfArticleBeenAdded"}} @bookTitle={{this.bookTitle}} @bookAuthor={{this.bookAuthor}} @bookSummary={{this.bookSummary}} />
+
+{{#if articleBeenAdded}}
+<Article @book.title={{this.bookTitle}} @book.author={{this.bookAuthor}} book.summary={{this.bookSummary}} />
+{{/if}}

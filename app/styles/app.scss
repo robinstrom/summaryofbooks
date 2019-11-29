@@ -4,10 +4,19 @@
 html, body {height:100%;}
 html {display:table; width:100%;}
 body {display:table-cell; text-align:center; vertical-align:middle;}
+.nav {
+    white-space: nowrap;
+    margin-top: 0;
+    margin-right: 0;
+}
 
 img {
     width: 20em;
     height: 25em;
+}
+.route-link, a:hover {
+    color: white;
+    text-decoration: none;
 }
 .slide-show {
     margin: auto;

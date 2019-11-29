@@ -2,15 +2,21 @@
     <div class="right tomster"></div>
     <h2>Welcome!</h2>
     <p>There will be loads of books here.</p>
-    {{#link-to "about" class="button"}}
-    <BsButton>About us</BsButton>
-    {{/link-to}}
-    {{#link-to "add-book" class="button"}}
-    <BsButton>Add a book</BsButton>
-    {{/link-to}}
-    {{#link-to "books" class="button"}}
-    <BsButton>See All Books</BsButton>
-    {{/link-to}}
+    <BsButton>
+        {{#link-to "about" class="route-link"}}
+        About us
+        {{/link-to}}
+    </BsButton>
+    <BsButton>
+        {{#link-to "add-book" class="route-link"}}
+        Add a book
+        {{/link-to}}
+    </BsButton>
+    <BsButton>
+        {{#link-to "books" class="route-link"}}
+        See All Books
+        {{/link-to}}
+    </BsButton>
 </div>
 
 <div class="slide-show">

@@ -1,18 +1,18 @@
-<div class="nav">
+<div class="app-navbar">
 <BsNavbar as |navbar|>
-  <div class="navbar-header">
-    {{navbar.toggle}}
-    <a class="navbar-brand" href="#">Brand</a>
-  </div>
-  <navbar.content>
-    <navbar.nav as |nav|>
-      <nav.item>
-        <nav.linkTo @route="home">Home</nav.linkTo>
-      </nav.item>
-      <nav.item>
-        <nav.linkTo @route="navbars">Navbars</nav.linkTo>
-      </nav.item>
-    </navbar.nav>
-  </navbar.content>
+    <div class="navbar-header">
+        {{navbar.toggle}}
+        <a class="navbar-brand" href="http://localhost:4200">summaryofbooks</a>
+    </div>
+        <navbar.content>
+            <navbar.nav as |nav|>
+                <nav.item>
+                    <nav.linkTo @route="index">Home</nav.linkTo>
+                </nav.item>
+                <nav.item>
+                    <nav.linkTo @route="about">About us</nav.linkTo>
+                </nav.item>
+            </navbar.nav>
+        </navbar.content>
 </BsNavbar>
 </div>

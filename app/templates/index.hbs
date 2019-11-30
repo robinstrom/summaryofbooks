@@ -1,31 +1,27 @@
-<div class="jumbo">
-    <div class="right tomster"></div>
-    <h2>Welcome!</h2>
-    <p>There will be loads of books here.</p>
-    <BsButton>
-        {{#link-to "about" class="route-link"}}
-        About us
-        {{/link-to}}
-    </BsButton>
-    <BsButton>
-        {{#link-to "add-book" class="route-link"}}
-        Add a book
-        {{/link-to}}
-    </BsButton>
-    <BsButton>
-        {{#link-to "books" class="route-link"}}
-        See All Books
-        {{/link-to}}
-    </BsButton>
-</div>
+<div class="home-page">
+    <div>
+        <h2>Welcome!</h2>
+        <p>There will be loads of books here.</p>
+        <BsButton>
+            {{#link-to "add-book" class="route-link"}}
+            Add a book
+            {{/link-to}}
+        </BsButton>
+        <BsButton>
+            {{#link-to "books" class="route-link"}}
+            See All Books
+            {{/link-to}}
+        </BsButton>
+    </div>
 
-<div class="slide-show">
-    <BsCarousel @autoPlay={{true}} @wrap={{true}} @index={{0}} @interval={{5000}} @keyboard={{true}} @ltr={{true}}
-        @pauseOnMouseEnter={{true}} @showControls={{true}} @showIndicators={{true}} as |slide|>
-        {{#each this.model as |book|}}
-        <slide.slide>
-            <img alt={{book.description}} src={{book.image}}>
-        </slide.slide>
-        {{/each}}
-    </BsCarousel>
+    <div class="slide-show">
+        <BsCarousel @autoPlay={{true}} @wrap={{true}} @index={{0}} @interval={{5000}} @keyboard={{true}} @ltr={{true}}
+            @pauseOnMouseEnter={{true}} @showControls={{true}} @showIndicators={{true}} as |slide|>
+            {{#each this.model as |book|}}
+            <slide.slide>
+                <img alt={{book.description}} src={{book.image}}>
+            </slide.slide>
+            {{/each}}
+        </BsCarousel>
+    </div>
 </div>

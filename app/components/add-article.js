@@ -6,7 +6,6 @@ export default Component.extend({
     bookSummary: null,
     actions: {
         submit() {
-            
         }
     }
 });

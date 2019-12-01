@@ -2,6 +2,7 @@
     <BsForm @onSubmit={{action "submit"}} as |form|>
         <form.element @label="Title" @placeholder="title" @property={{this.title}} @required={{true}} />
         <form.element @label="Author" @placeholder="author" @property={{this.author}} @required={{true}} />
+        <form.element @controlType="file" @label="Upload book image" @property={{this.image}} />
         <form.element @controlType="textarea" @label="Textarea" @property={{this.textarea}} />
         <BsButton @defaultText="Submit" @type="primary" @buttonType="submit" />
     </BsForm>
